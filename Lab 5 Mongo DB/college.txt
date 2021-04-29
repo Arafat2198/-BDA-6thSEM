@@ -27,26 +27,26 @@ admin    0.000GB
 config   0.000GB
 local    0.000GB
 student  0.000GB
-> db.student.insert({Roll: 10, Name: "Shreyash", age: 21, contact: "2243422332", email: "sa@gmail.com"})
+> db.student.insert({Roll: 10, Name: "Mohammad Arafat", age: 21, contact: "2243422332", email: "sa@gmail.com"})
 WriteResult({ "nInserted" : 1 })
-> db.student.insert({Roll: 11, Name: "Emilia", age: 20, contact: "4443422332", email: "em@gmail.com"})
+> db.student.insert({Roll: 11, Name: "Adnan", age: 20, contact: "4443422332", email: "em@gmail.com"})
 WriteResult({ "nInserted" : 1 })
 > db.student.insert({Roll: 12, Name: "Yukino", age: 20, contact: "1143422332", email: "yuki@gmail.com"})
 WriteResult({ "nInserted" : 1 })
 > db.student.insert({Roll: 13, Name: "Kazuma", age: 21, contact: "9943422332", email: "@gmail.com"})
 WriteResult({ "nInserted" : 1 })
 > db.student.find()
-{ "_id" : ObjectId("607808ca7ed304f603d2698e"), "Roll" : 10, "Name" : "Shreyash", "age" : 21, "contact" : "2243422332", "email" : "sa@gmail.com" }
-{ "_id" : ObjectId("607808ed7ed304f603d2698f"), "Roll" : 11, "Name" : "Emilia", "age" : 20, "contact" : "4443422332", "email" : "em@gmail.com" }
+{ "_id" : ObjectId("607808ca7ed304f603d2698e"), "Roll" : 10, "Name" : "Arafat", "age" : 21, "contact" : "2243422332", "email" : "sa@gmail.com" }
+{ "_id" : ObjectId("607808ed7ed304f603d2698f"), "Roll" : 11, "Name" : "Adnan", "age" : 20, "contact" : "4443422332", "email" : "em@gmail.com" }
 { "_id" : ObjectId("6078091a7ed304f603d26990"), "Roll" : 12, "Name" : "Yukino", "age" : 20, "contact" : "1143422332", "email" : "yuki@gmail.com" }
 { "_id" : ObjectId("6078095d7ed304f603d26991"), "Roll" : 13, "Name" : "Kazuma", "age" : 21, "contact" : "9943422332", "email" : "@gmail.com" }
-> db.student.update({Roll:10}, {$set: {email: "shreyash@gmail.com"}})
+> db.student.update({Roll:10}, {$set: {email: "Arafat@gmail.com"}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-> db.student.update({Roll:11}, {$set: {Name: "Emilia-tan"}})
+> db.student.update({Roll:11}, {$set: {Name: "Adnan-tan"}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.student.find()
-{ "_id" : ObjectId("607808ca7ed304f603d2698e"), "Roll" : 10, "Name" : "Shreyash", "age" : 21, "contact" : "2243422332", "email" : "shreyash@gmail.com" }
-{ "_id" : ObjectId("607808ed7ed304f603d2698f"), "Roll" : 11, "Name" : "Emilia-tan", "age" : 20, "contact" : "4443422332", "email" : "em@gmail.com" }
+{ "_id" : ObjectId("607808ca7ed304f603d2698e"), "Roll" : 10, "Name" : "Arafat", "age" : 21, "contact" : "2243422332", "email" : "Arafat@gmail.com" }
+{ "_id" : ObjectId("607808ed7ed304f603d2698f"), "Roll" : 11, "Name" : "Adnan-tan", "age" : 20, "contact" : "4443422332", "email" : "em@gmail.com" }
 { "_id" : ObjectId("6078091a7ed304f603d26990"), "Roll" : 12, "Name" : "Yukino", "age" : 20, "contact" : "1143422332", "email" : "yuki@gmail.com" }
 { "_id" : ObjectId("6078095d7ed304f603d26991"), "Roll" : 13, "Name" : "Kazuma", "age" : 21, "contact" : "9943422332", "email" : "@gmail.com" }
 > db.createCollection("College Festival");
@@ -70,23 +70,23 @@ College Festival
 Faculty
 Library
 student
-> db.COE.insert({Roll: 10, Name: "Shreyash", age: 21, Subject1:100, Subject2:100, Subject3:100, Grade:"S" })
+> db.COE.insert({Roll: 10, Name: "Arafat", age: 21, Subject1:100, Subject2:100, Subject3:100, Grade:"S" })
 WriteResult({ "nInserted" : 1 })
-> db.COE.insert({Roll: 10, Name: "Emilia-tan", age: 20, Subject1:100, Subject2:100, Subject3:100, Grade:"S" })
+> db.COE.insert({Roll: 10, Name: "Adnan-tan", age: 20, Subject1:100, Subject2:100, Subject3:100, Grade:"S" })
 WriteResult({ "nInserted" : 1 })
 > db.COE.insert({Roll: 10, Name: "Yukino", age: 20, Subject1:100, Subject2:100, Subject3:100, Grade:"S" })
 WriteResult({ "nInserted" : 1 })
 > db.COE.insert({Roll: 13, Name: "Kazuma", age: 21, Subject1:60, Subject2:50, Subject3:40, Grade:"D" })
 WriteResult({ "nInserted" : 1 })
-> db.student.update({Name:"Emilia-tan"}, {$set: {Roll: 11 }})
+> db.student.update({Name:"Adnan-tan"}, {$set: {Roll: 11 }})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
-> db.COE.update({Name:"Emilia-tan"}, {$set: {Roll: 11 }})
+> db.COE.update({Name:"Adnan-tan"}, {$set: {Roll: 11 }})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.COE.update({Name:"Yukino"}, {$set: {Roll: 12 }})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.COE.find()
-{ "_id" : ObjectId("60780ae37ed304f603d26992"), "Roll" : 10, "Name" : "Shreyash", "age" : 21, "Subject1" : 100, "Subject2" : 100, "Subject3" : 100, "Grade" : "S" }
-{ "_id" : ObjectId("60780afc7ed304f603d26993"), "Roll" : 11, "Name" : "Emilia-tan", "age" : 20, "Subject1" : 100, "Subject2" : 100, "Subject3" : 100, "Grade" : "S" }
+{ "_id" : ObjectId("60780ae37ed304f603d26992"), "Roll" : 10, "Name" : "Arafat", "age" : 21, "Subject1" : 100, "Subject2" : 100, "Subject3" : 100, "Grade" : "S" }
+{ "_id" : ObjectId("60780afc7ed304f603d26993"), "Roll" : 11, "Name" : "Adnan-tan", "age" : 20, "Subject1" : 100, "Subject2" : 100, "Subject3" : 100, "Grade" : "S" }
 { "_id" : ObjectId("60780b117ed304f603d26994"), "Roll" : 12, "Name" : "Yukino", "age" : 20, "Subject1" : 100, "Subject2" : 100, "Subject3" : 100, "Grade" : "S" }
 { "_id" : ObjectId("60780b4b7ed304f603d26995"), "Roll" : 13, "Name" : "Kazuma", "age" : 21, "Subject1" : 60, "Subject2" : 50, "Subject3" : 40, "Grade" : "D" }
 > db.Faculty.insert({No:1 , Name: "Koro", age: 31, phone: 9090909090, email: "koro@bmsce.ac.in",city:"Bengaluru" })
@@ -109,20 +109,20 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("60780d2e7ed304f603d26999"), "isn" : 1, "name" : "Mocking bird", "department" : "Literature", "price" : 250, "quantity" : 20, "borrowed" : 10 }
 { "_id" : ObjectId("60780d3f7ed304f603d2699a"), "isn" : 2, "name" : "Naruto", "department" : "Literature", "price" : 250, "quantity" : 20, "borrowed" : 10 }
 { "_id" : ObjectId("60780d717ed304f603d2699b"), "isn" : 2, "name" : "SAO VR", "department" : "PG", "price" : 1250, "quantity" : 2, "borrowed" : 1 }
-> db.Admission.insert({usn:1, name:"Shreyash", bday:"22/2/2000",email:sa@gmail.com, rank:101, fees:100000 })
+> db.Admission.insert({usn:1, name:"Arafat", bday:"22/2/2000",email:sa@gmail.com, rank:101, fees:100000 })
 uncaught exception: SyntaxError: illegal character :
 @(shell):1:70
-> db.Admission.insert({usn:1, name:"Shreyash", bday:"22/2/2000",email:"sa@gmail.com", rank:101, fees:100000 })
+> db.Admission.insert({usn:1, name:"Arafat", bday:"22/2/2000",email:"sa@gmail.com", rank:101, fees:100000 })
 WriteResult({ "nInserted" : 1 })
-> db.Admission.insert({usn:2, name:"Emilia-tan", bday:"23/9/2000",email:"em@gmail.com", rank:100, fees:120000 })
+> db.Admission.insert({usn:2, name:"Adnan-tan", bday:"23/9/2000",email:"em@gmail.com", rank:100, fees:120000 })
 WriteResult({ "nInserted" : 1 })
 > db.Admission.insert({usn:3, name:"Yukino", bday:"3/1/2001",email:"yukino@gmail.com", rank:109, fees:110000 })
 WriteResult({ "nInserted" : 1 })
 > db.Admission.insert({usn:4, name:"Kazuma", bday:"7/6/2000",email:"kazuma@gmail.com", rank:10900, fees:110000 })
 WriteResult({ "nInserted" : 1 })
 > db.Admission.find()
-{ "_id" : ObjectId("60780eab7ed304f603d2699c"), "usn" : 1, "name" : "Shreyash", "bday" : "22/2/2000", "email" : "sa@gmail.com", "rank" : 101, "fees" : 100000 }
-{ "_id" : ObjectId("60780ed07ed304f603d2699d"), "usn" : 2, "name" : "Emilia-tan", "bday" : "23/9/2000", "email" : "em@gmail.com", "rank" : 100, "fees" : 120000 }
+{ "_id" : ObjectId("60780eab7ed304f603d2699c"), "usn" : 1, "name" : "Arafat", "bday" : "22/2/2000", "email" : "sa@gmail.com", "rank" : 101, "fees" : 100000 }
+{ "_id" : ObjectId("60780ed07ed304f603d2699d"), "usn" : 2, "name" : "Adnan-tan", "bday" : "23/9/2000", "email" : "em@gmail.com", "rank" : 100, "fees" : 120000 }
 { "_id" : ObjectId("60780f087ed304f603d2699e"), "usn" : 3, "name" : "Yukino", "bday" : "3/1/2001", "email" : "yukino@gmail.com", "rank" : 109, "fees" : 110000 }
 { "_id" : ObjectId("60780f927ed304f603d2699f"), "usn" : 4, "name" : "Kazuma", "bday" : "7/6/2000", "email" : "kazuma@gmail.com", "rank" : 10900, "fees" : 110000 }
 > db.College Festival.insert{(no: 1, name: "chairs", type: "equipment", quantity:100, accomodated:70, venue: "auditorium" )}
